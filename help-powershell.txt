@@ -1,0 +1,44 @@
+1. Verifique si existen cmdlets que permitan convertir la salida de otro cmdlet a formato HTML.
+help *html*
+
+2. Verifique cuáles cmdlets permiten dirigir la salida hacia una impresora, o hacia un archivo.
+help *file*
+help *printer*
+
+This is to see all the functions that can be used to output something
+help out*
+
+3. Verifique cuántos cmdlets sirven para gestionar procesos.
+help *procesos
+
+4. Cuál cmdlet podría usarse para escribir una entrada en un log de eventos?
+help *event*
+help *log*
+help *eventlog
+
+5. Cuáles cmdlets pueden emplearse para gestionar alias?
+help *alias
+
+6. Hay alguna manera de llevar un registro (transcript) de una sesión de Powershell, y de grabar dicho registro en un archivo?
+help *transcript*
+
+7. Cómo se pueden obtener los 100 registros más recientes del log de eventos SECURITY del sistema?
+help *eventlog
+help get-eventlog -full
+Get-EventLog -LogName Security -Newest 100 
+
+8. Existe alguna manera de obtener la lista de los servicios que se están ejecutando en un computador remoto?
+help *service
+get-service -computername localhost
+
+9. Existe alguna manera de obtener la lista de procesos de un computador remoto?
+help get-process
+get-process -ComputerName SimonPC
+
+10. Revise la ayuda del cmdlet ``Out-File``. Cuál es el tamaño de línea que emplea este cmdlet por omisión? 
+    Existe algún parámetro que permita cambiar dicho tamaño?
+help out-file -full
+
+11. Por omisión, ``Out-File`` sobreescribe el archivo de salida, en caso de que
+   exista. Existe algún parámetro que impida la sobreescritura de un archivo existente?
+help out-file -full
